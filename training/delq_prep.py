@@ -79,3 +79,6 @@ container_name = "azureml-blobstore-425a3630-be58-4693-b227-d526b82dbbf8"
 dest_file_name = "preproc_delq.csv"
 
 blob_client = BlobClient.from_connection_string(storage_connection_string,container_name,dest_file_name)
+
+
+blob_client.upload_blob(dfinvoptcpy2, blob_type="BlockBlob",overwrite=True)
